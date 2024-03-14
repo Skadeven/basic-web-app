@@ -17,4 +17,25 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+    test('should return name', () => {
+        const query = "name";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "Skadi"
+          ));
+    });
+    test('should return right answer of adding two numbers', () => {
+        const query = "What is 3 plus 5?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "8"
+          ));
+    });
+    test('should return largest number', () => {
+        const query = "Which of the following numbers is the largest: 91, 19, 70?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "91"
+          ));
+    });
 });
