@@ -25,10 +25,10 @@ describe("QueryProcessor", () => {
           ));
     });
     test('should return right answer of adding two numbers', () => {
-        const query = "What is 3 plus 5?";
+        const query = "What is 8 plus 5?";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
-            "8"
+            "13"
           ));
     });
     test('should return largest number', () => {
@@ -36,6 +36,13 @@ describe("QueryProcessor", () => {
         const response: string = QueryProcessor(query);
         expect(response).toBe((
             "91"
+          ));
+    });
+    test('should return a-b', () => {
+        const query = "What is 66 minus 64?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "2"
           ));
     });
 });
